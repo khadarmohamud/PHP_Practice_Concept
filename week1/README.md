@@ -1,5 +1,5 @@
  PHP Variables, If-Else, and Switch Statement
- 1. PHP Variables
+1. PHP Variables
 
 A variable is a container used to store data, such as a name, age, or number.
 
