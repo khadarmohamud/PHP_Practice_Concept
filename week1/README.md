@@ -1,122 +1,86 @@
-# PHP Variables, If-Else, and Switch Statement
+## 1. PHP Syntax
+PHP code starts with `<?php`. Most PHP statements end with a semicolon (`;`).
 
-## 1. PHP Variables
+## 2. echo and print
+Both are used to display text or data in the browser. `echo` can accept multiple parameters, while `print` accepts one.
 
-A variable is a container used to store data, such as a name, age, or number.
+## 3. Comments
+Comments explain code and are not executed by PHP.
+- `//` Single-line comment
+- `/* */` Multi-line comment
+- `#` Single-line comment
 
-### Example
+## 4. Variables
+Variables store values and start with `$`.
 
+Example:
 ```php
-<?php
 $name = "Ali";
 $age = 20;
-$price = 10.5;
-$isStudent = true;
-
-echo $name;
-echo "<br>";
-echo $age;
-?>
 ```
 
-### Explanation of Variables
+## 5. Data Types
+- Integer: Whole numbers, e.g. `10`
+- Float: Decimal numbers, e.g. `3.14`
+- String: Text, e.g. `"Hello"`
+- Boolean: `true` or `false`
 
-* `$name`: Stores a person's name.
-* `$age`: Stores a person's age.
-* `$price`: Stores a price or decimal number.
-* `$isStudent`: Stores a true or false value.
-
-### Important Rules
-
-* A PHP variable starts with the `$` symbol.
-* A variable name must start with a letter or underscore after `$`.
-* Variable names are case-sensitive.
-* Use `=` to assign a value to a variable.
-* Use `echo` to display a variable's value.
-
-### Output
-
-```text
-Ali
-20
-```
-
-## 2. If, Elseif, and Else
-
-These statements are used to make decisions based on conditions.
-
-### Example
+## 6. Single and Double Quotes
+Single quotes do not normally interpret variables. Double quotes allow variables to be interpreted.
 
 ```php
-<?php
-$a = 20;
-$b = 10;
-
-if ($a > $b) {
-    echo "$a is greater than $b";
-} elseif ($a < $b) {
-    echo "$a is less than $b";
-} else {
-    echo "$a is equal to $b";
-}
-?>
+$a = 10;
+echo '$a';  // $a
+echo "$a";  // 10
 ```
 
-### Explanation
-
-* `if`: Checks the first condition.
-* `elseif`: Checks another condition if the first is false.
-* `else`: Runs when all previous conditions are false.
-* `<br>`: Moves the output to a new line.
-
-### Output
-
-```text
-20 is greater than 10
-```
-
-## 3. Switch Statement
-
-A switch statement is used to select one option from multiple cases.
-
-### Example
+## 7. Constants
+A constant stores a value that cannot be changed during the program.
 
 ```php
-<?php
-$day = 3;
-
-switch ($day) {
-    case 1:
-        echo "Monday";
-        break;
-
-    case 2:
-        echo "Tuesday";
-        break;
-
-    case 3:
-        echo "Wednesday";
-        break;
-
-    case 4:
-        echo "Thursday";
-        break;
-
-    default:
-        echo "Invalid day";
-}
-?>
+define("PI", 3.14);
+echo PI;
 ```
 
-### Explanation
+## 8. Operators
+- Arithmetic: `+ - * / %`
+- Assignment: `=`
+- Comparison: `== != > < >= <=`
+- Logical: `&& || !`
+- Increment/Decrement: `++ --`
+- Concatenation: `.`
+- Ternary: `? :`
 
-* `switch`: Checks the value of a variable.
-* `case`: Defines a possible value.
-* `break`: Stops the switch after a matching case.
-* `default`: Runs when no case matches.
+## 9. Conditional Statements
+Conditional statements make decisions in a program.
+- `if`: Runs code when a condition is true.
+- `if...else`: Chooses between two paths.
+- `elseif`: Checks additional conditions.
+- `switch`: Selects a matching case.
+- `break`: Stops execution in a switch case or loop.
+- `default`: Runs when no switch case matches.
 
-### Output
+## 10. Ternary Operator
+A short form of `if...else`.
 
-```text
-Wednesday
+```php
+$age = 20;
+echo $age >= 18 ? "Adult" : "Minor";
 ```
+
+## 11. Loops
+Loops repeat code.
+- `while`: Checks the condition before running.
+- `do...while`: Runs at least once before checking the condition.
+- `for`: Uses initialization, condition, and update.
+- `foreach`: Processes each element in an array.
+
+## 12. break and continue
+- `break`: Stops the loop.
+- `continue`: Skips the current iteration and moves to the next one.
+
+## 13. Nested Loops
+A nested loop is a loop inside another loop. It is useful for multiplication tables and rows and columns.
+
+## 14. Operator Precedence
+Operator precedence determines which operation is performed first. Parentheses `()` help control the order.
