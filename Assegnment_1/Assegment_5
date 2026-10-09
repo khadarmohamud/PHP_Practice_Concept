@@ -1,0 +1,13 @@
+//Reverse a Number Without strrev()
+<?php
+$n = 12345;
+$reverse = 0;
+
+while ($n > 0) {
+    $digit = $n % 10;
+    $reverse = $reverse * 10 + $digit;
+    $n = (int)($n / 10);
+}
+
+echo "Reverse = $reverse";
+?>
