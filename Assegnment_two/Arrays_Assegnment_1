@@ -7,7 +7,6 @@
 </head>
 <body>
     <?php
-    //One-Dimensional Array
 $arr = [5, -7, 12, 10, -7, 11, -6, 12, 1, -7, 2, 9];
 
 $total = 0;
@@ -60,46 +59,5 @@ foreach ($arr as $key => $value) {
     }
 }
 ?>
-
-
-
-
-
-
-
-
-    <?php
-    $students = [
-        "CA221" => [
-            "Name" => "Mohamed Ahmed Ali",
-            "Phone" => "0648440403",
-            "Address" => "Laba Dhagax, Wardhiigley"
-        ],
-        "CA223" => [
-            "Name" => "Ahmed Abdi Jama",
-            "Phone" => "0647223201",
-            "Address" => "Taleex, Hodan"
-        ],
-        "CA221_2" => [
-            "Name" => "Khadar Nur Adan",
-            "Phone" => "0614487537",
-            "Address" => "Macmacaanka, Kaxda"
-        ]
-    ];
-
-    foreach ($students as $id => $info) {
-        echo "<tr>";
-        echo "<td>" . $id . "</td>";
-        echo "<td>" . $info["Name"] . "</td>";
-        echo "<td>" . $info["Phone"] . "</td>";
-        echo "<td>" . $info["Address"] . "</td>";
-        echo "</tr>";
-    }
-    ?>
-</table>
-
-
-
-
 </body>
 </html>
