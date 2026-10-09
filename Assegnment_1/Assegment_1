@@ -1,0 +1,24 @@
+//Greatest and Smallest of Three Numbers
+<?php
+$a = 10;
+$b = 25;
+$c = 5;
+
+$greatest = $a;
+$smallest = $a;
+
+if ($b > $greatest)
+    $greatest = $b;
+
+if ($c > $greatest)
+    $greatest = $c;
+
+if ($b < $smallest)
+    $smallest = $b;
+
+if ($c < $smallest)
+    $smallest = $c;
+
+echo "Greatest = $greatest <br>";
+echo "Smallest = $smallest";
+?>
