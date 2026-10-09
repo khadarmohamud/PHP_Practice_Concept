@@ -1,1 +1,61 @@
 
+<table border="1" cellpadding="5">
+    <?php
+    $colors = [
+        "Light" => [
+            "Red" => "Light Red",
+            "Green" => "Light Green",
+            "Blue" => "Light Blue"
+        ],
+        "Normal" => [
+            "Red" => "Normal Red",
+            "Green" => "Normal Green",
+            "Blue" => "Normal Blue"
+        ],
+        "Dark" => [
+            "Red" => "Dark Red",
+            "Green" => "Dark Green",
+            "Blue" => "Dark Blue"
+        ]
+    ];
+
+    echo "<tr><th></th><th>Red</th><th>Green</th><th>Blue</th></tr>";
+
+    foreach ($colors as $row => $values) {
+        echo "<tr>";
+        echo "<th>" . $row . "</th>";
+
+        foreach ($values as $value) {
+            echo "<td>" . $value . "</td>";
+        }
+
+        echo "</tr>";
+    }
+    ?>
+
+<table border="1" cellpadding="5">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>Address</th>
+    </tr>
+
+    <?php
+    $students = [
+        "CA221" => [
+            "Name" => "Mohamed Ahmed Ali",
+            "Phone" => "0648440403",
+            "Address" => "Laba Dhagax, Wardhiigley"
+        ],
+        "CA223" => [
+            "Name" => "Ahmed Abdi Jama",
+            "Phone" => "0647223201",
+            "Address" => "Taleex, Hodan"
+        ],
+        "CA221_2" => [
+            "Name" => "Khadar Nur Adan",
+            "Phone" => "0614487537",
+            "Address" => "Macmacaanka, Kaxda"
+        ]
+    ];
