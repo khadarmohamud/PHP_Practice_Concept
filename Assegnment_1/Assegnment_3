@@ -1,0 +1,12 @@
+// Odd Numbers from 2 to 20 and Even Numbers from 35 to 7
+<?php
+echo "Odd Numbers:<br>";
+
+for ($i = 3; $i <= 20; $i += 2)
+    echo "$i ";
+
+echo "<br>Even Numbers:<br>";
+
+for ($i = 34; $i >= 7; $i -= 2)
+    echo "$i ";
+?>
