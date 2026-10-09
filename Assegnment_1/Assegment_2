@@ -1,0 +1,13 @@
+// Divisible by 3, 5, Both, or None
+<?php
+$n = 15;
+
+if ($n % 3 == 0 && $n % 5 == 0)
+    echo "Divisible by both 3 and 5";
+elseif ($n % 3 == 0)
+    echo "Divisible by 3";
+elseif ($n % 5 == 0)
+    echo "Divisible by 5";
+else
+    echo "Divisible by none";
+?>
