@@ -1,220 +1,119 @@
-## 📌 About This Project
 
-This project explains the basic concepts of Arrays and Functions in PHP.
+## Important Concepts for Exam Preparation
 
-It contains 10 code examples with simple explanations to help  understand how each code works.
+### 1. Array
+**Definition:** An array is a variable that stores multiple values under one name.
+
+### 2. Types of Arrays
+- **Numerically Indexed Array:** An array that uses numeric indexes starting from 0.
+- **Associative Array:** An array that uses named keys to store values.
+- **Multidimensional Array:** An array that contains one or more arrays.
+
+### 3. Foreach Loop
+**Definition:** `foreach` is a loop used to access each element of an array.
+
+```php
+$numbers = array(10, 20, 30);
+
+foreach ($numbers as $n) {
+    echo $n;
+}
+```
+
+### 4. Important Array Functions
+- `count()` — Returns the number of elements in an array.
+- `is_array()` — Checks whether a variable is an array.
+- `in_array()` — Checks whether a value exists in an array.
+- `sort()` — Sorts an array in ascending order.
+- `rsort()` — Sorts an array in descending order.
+- `array_push()` — Adds an element to the end of an array.
+- `array_pop()` — Removes the last element of an array.
+- `array_merge()` — Combines two or more arrays.
+- `array_reverse()` — Reverses the order of elements.
+- `explode()` — Converts a string into an array.
+- `implode()` — Converts an array into a string.
+
+### 5. Function
+**Definition:** A function is a block of code that performs a specific task and can be reused.
+
+**Advantages of Functions:**
+- Code reusability.
+- Reduces repeated code.
+- Helps reduce programming errors.
+
+```php
+function writeMsg() {
+    echo "Hello World";
+}
+
+writeMsg();
+```
+
+### 6. Parameters vs Arguments
+- **Parameter:** A variable that receives a value in a function definition.
+- **Argument:** A value passed to a function when it is called.
+
+```php
+function greet($name) {
+    echo $name;
+}
+
+greet("Ahmed");
+```
+
+### 7. Returning a Value
+**Definition:** The `return` statement sends a value back from a function to the calling code.
+
+```php
+function add() {
+    return 5 + 3;
+}
+
+echo add();
+```
+
+**Output:** `8`
+
+### 8. Passing by Value vs Passing by Reference
+- **Passing by Value:** Passes a copy of a value. Changes inside the function do not affect the original variable.
+- **Passing by Reference:** Passes a reference to the original variable. Changes inside the function can affect the original variable. It uses `&`.
+
+### 9. Default Argument Value
+**Definition:** A default argument is a value assigned to a parameter when no argument is provided.
+
+```php
+function greet($name = "Ahmed") {
+    echo $name;
+}
+
+greet();
+```
+
+**Output:** `Ahmed`
+
+### 10. Scope of Variables
+- **Local Variable:** A variable declared inside a function and accessible within its local scope.
+- **Global Variable:** A variable declared outside a function.
+- **Static Variable:** A local variable that retains its value between function calls.
+- **Superglobal Variables:** Predefined variables accessible throughout the script, such as `$_GET`, `$_SESSION`, `$_FILES`, `$_SERVER`, and `$GLOBALS`.
+
+### 11. Including Files in PHP
+- **`include`:** Includes a file. If the file is missing, PHP gives a warning and continues execution.
+- **`require`:** Includes a file. If the file is missing, PHP produces a fatal error and stops execution.
+- **`include_once`:** Includes a file only once.
+- **`require_once`:** Requires a file only once.
 
 ---
 
-## 1. Indexed Array
-
-An indexed array stores multiple values in one variable. Each value has a numeric index starting from `0`.
-
-### Code Explanation
-
-* `$numbers` stores five numbers.
-* `foreach` loops through each value in the array.
-* `$number` holds the current value.
-* `echo` displays each number.
-* `<br>` moves each number to a new line.
-
-### Output
-
-```text
-10
-20
-30
-40
-50
-```
-
----
-
-## 2. Associative Array
-
-An associative array stores data using named keys and values.
-
-### Code Explanation
-
-* `$student` stores information about a student.
-* `"name"`, `"age"`, and `"city"` are the keys.
-* `"Ali"`, `20`, and `"Mogadishu"` are the values.
-* `$student["name"]` accesses the value using its key.
-* `echo` displays the student information.
-
-### Output
-
-```text
-Ali
-20
-Mogadishu
-```
-
----
-
-## 3. Multidimensional Array
-
-A multidimensional array is an array that contains other arrays.
-
-### Code Explanation
-
-* `$students` stores information about three students.
-* Each inner array contains a name, age, and student ID.
-* `foreach` loops through each student's information.
-* `$student[0]` accesses the name.
-* `$student[1]` accesses the age.
-* `$student[2]` accesses the student ID.
-
-### Output
-
-```text
-Ali 20 CA221
-Ahmed 22 CA223
-Amina 19 CA225
-```
-
----
-
-## 4. Array Functions
-
-PHP provides built-in functions to count, calculate, and sort array values.
-
-### Functions Explained
-
-| Function      | Description                              |
-| ------------- | ---------------------------------------- |
-| `count()`     | Counts the number of elements.           |
-| `array_sum()` | Calculates the total of all values.      |
-| `max()`       | Finds the largest value.                 |
-| `min()`       | Finds the smallest value.                |
-| `sort()`      | Sorts values in ascending order.         |
-| `print_r()`   | Displays the array in a readable format. |
-
-### Output
-
-```text
-Count: 4
-Sum: 50
-Maximum: 20
-Minimum: 5
-Sorted Array: Array ( [0] => 5 [1] => 10 [2] => 15 [3] => 20 )
-```
-
----
-
-## 5. Create a Function
-
-A function is a reusable block of code that performs a specific task.
-
-### Code Explanation
-
-* `function` is used to create a function.
-* `sayHello()` is the function name.
-* `echo` displays a message.
-* `sayHello();` calls the function and runs its code.
-
-### Output
-
-```text
-Hello Students
-```
-
----
-
-## 6. Function with Parameters
-
-A parameter allows a function to receive a value.
-
-### Code Explanation
-
-* `greet()` is the function name.
-* `$name` is the parameter.
-* `"Ali"` is the argument passed to the function.
-* The function displays a greeting using the given name.
-
-### Output
-
-```text
-Hello Ali
-```
-
----
-
-## 7. Function with Return
-
-The `return` statement sends a value back from a function.
-
-### Code Explanation
-
-* `$a` and `$b` receive two numbers.
-* `return $a + $b;` returns their sum.
-* `add(10, 20)` calls the function.
-* `$result` stores the returned value.
-* `echo` displays the result.
-
-### Output
-
-```text
-Result: 30
-```
-
----
-
-## 8. Default Argument
-
-A default argument is a value used when no argument is provided.
-
-### Code Explanation
-
-* `$name = "Student"` sets a default value.
-* `welcome()` uses the default value.
-* `welcome("Ali")` uses the name provided in the function call.
-
-### Output
-
-```text
-Welcome Student
-Welcome Ali
-```
-
----
-
-## 9. Pass by Reference
-
-Pass by reference allows a function to change the original variable.
-
-### Code Explanation
-
-* `$x` starts with the value `10`.
-* `&$number` passes a reference to the original variable.
-* The function changes the value to `100`.
-* After the function call, `$x` becomes `100`.
-
-### Output
-
-```text
-Number: 100
-```
-
----
-
-## 10. Include Another PHP File
-
-### Description
-
-The `include` statement loads another PHP file into the current file.
-
-### Code Explanation
-
-* `message.php` contains a function named `message()`.
-* `include "message.php";` loads the file.
-* `message();` calls the function from the included file.
-
-### Output
-
-```text
-Welcome to PHP
-```
-
-
-⭐ Thank you for visiting my project!
+## Most Important Topics to Memorize
+1. Definition of Array.
+2. Three Types of Arrays.
+3. `foreach` Loop.
+4. Array Functions.
+5. Definition and Advantages of Functions.
+6. Parameters vs Arguments.
+7. `return` Statement.
+8. Passing by Value vs Passing by Reference.
+9. Default Argument Value.
+10. Local, Global, Static, and Superglobal Variables.
+11. `include` vs `require`.
