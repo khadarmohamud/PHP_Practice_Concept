@@ -1,6 +1,4 @@
 
-## Important Concepts for Exam Preparation
-
 ### 1. Array
 **Definition:** An array is a variable that stores multiple values under one name.
 
